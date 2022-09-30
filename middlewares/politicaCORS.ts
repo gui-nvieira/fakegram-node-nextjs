@@ -11,9 +11,7 @@ export const politicaCORS =  (handler: NextApiHandler) => async (req: NextApiReq
             methods : ['GET', 'POST', 'PUT'],
             optionsSucessStatus : 200, 
         });
-
         return handler (req,res);
-
     }catch(e){
         console.log('Erro ao tratar a política de CORS', e);
         res.status(500).json({erro: 'Erro ao tratar a política de CORS'});
